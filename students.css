@@ -1,0 +1,119 @@
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4; /* Couleur de fond */
+}
+
+/* Students Section */
+.students-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0;
+}
+
+.image-container {
+    position: relative;
+    width: 90%; /* Augmentation de la largeur de l'image */
+    max-width: 1200px; /* Largeur maximale pour limiter */
+    height: 400px; /* Hauteur fixe */
+    margin: 0 auto; /* Centrage horizontal de l'image */
+    overflow: hidden;
+}
+
+/* Image dans le HTML */
+.background-image {
+    width: 100%; /* Image prend toute la largeur de son conteneur */
+    height: 100%; /* Image prend toute la hauteur du conteneur */
+    object-fit: cover; /* Maintenir les proportions de l'image tout en couvrant la zone */
+    object-position: center 20%; /* Décalage vertical de l'image */
+}
+
+/* Overlay vert transparent */
+.overlay {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 128, 0, 0.4); /* Couche verte transparente (réduite pour plus de visibilité) */
+    z-index: 1; /* L'overlay se trouve sous le texte */
+}
+
+/* Content inside the image */
+.content {
+    position: absolute;
+    top: 50%; /* Centrer verticalement */
+    left: 50%; /* Centrer horizontalement */
+    transform: translate(-50%, -50%); /* Ajustement pour le centrage parfait */
+    z-index: 2; /* Le texte doit être au-dessus de l'overlay */
+    color: white;
+    text-align: center;
+    padding: 20px;
+    width: 100%; /* S'assurer que le texte prend toute la largeur disponible */
+}
+
+/* Style du titre */
+.content h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7); /* Ombre légère autour du texte pour le rendre plus visible */
+    color: white;
+}
+
+/* Style des statistiques */
+.stats {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    color: white;
+}
+
+.stats div {
+    text-align: center;
+    flex: 1;
+    min-width: 120px;
+    color: white;
+}
+
+.stats h2 {
+    font-size: 2rem;
+    margin-bottom: 5px;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7); /* Ombre légère pour la lisibilité */
+}
+
+.stats p {
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .image-container {
+        height: 250px; /* Réduit la hauteur sur mobile */
+    }
+
+    .background-image {
+        object-position: center 10%; /* Ajustement sur mobile */
+    }
+
+    .content h1 {
+        font-size: 2rem;
+    }
+
+    .stats h2 {
+        font-size: 1.5rem;
+    }
+
+    .stats p {
+        font-size: 0.9rem;
+    }
+}
