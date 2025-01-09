@@ -51,23 +51,51 @@
         <ul>
           <li><a href="index.html" class="active">Home<br></a></li>
           <li><a href="about.html">About</a></li>
-          <li><a href="courses.html">Projects</a></li>
-          <li><a href="trainers.html">Programmes</a></li>
-          <li><a href="pricing.html">Students</a></li>
-          <li><a href="events.html">Events</a></li>
+          <li class="dropdown"><a href="project.html"><span>Projects</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="project.html">Research Projects</a></li>
+              <li><a href="gbif.html">GBIF Benin</a></li>
+              <li><a href="phd.html">KU</a></li>
+            </ul>
+          </li>
+          <li class="dropdown"><a href="Programme.html"><span>Programmes</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="Programme.html">Overview</a></li>
+              <li><a href="phd_apply_bi.html">PhD in Biodiversity Informatics</a></li>
+              <li><a href="phd_apply_forestry.html">PhD in Forestry</a></li>
+              <li><a href="mscbi.html">Msc in Biodiversity Informatics</a></li>
+              <li><a href="short_courses.html">Short Courses</a></li>
+            </ul>
+          </li>
+          <li><a href="student.html">Students</a></li>
+          <li class="dropdown"><a href="publication.html"><span>Publications</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="#">Technical Note</a></li>
+              <li class="dropdown"><a href="#"><span>Bsc,Msc,PhD Dissertations</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul>
+                  <li><a href="#">Bsc Dissertation</a></li>
+                  <li><a href="#">Msc Dissertation</a></li>
+                  <li><a href="#">PhD Dissertation</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Journal Article</a></li>
+              <li><a href="#">Books & Book Chapters</a></li>
+              <li><a href="#">Reports working & Documents</a></li>
+            </ul>
+          </li>
           <li class="dropdown"><a href="#"><span>Team Members</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
               <li><a href="management.html">MANAGEMENT ADMINISTRATION</a></li>
               <li><a href="assistant.html">LABORATORY AND FIELD ASSISTANTS</a></li>
               <li><a href="phd.html">PhD CANDIDATES</a></li>
+              <li><a href="msc.html">Msc CANDIDATES</a></li>
             </ul>
           </li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
-
-      <a class="btn-getstarted" href="courses.html">Get Started</a>
+      <a class="btn-getstarted" href="Programme.html">Get Started</a>
 
     </div>
   </header>
@@ -108,7 +136,7 @@
             <a href="#" class="read-more"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
           </div>
           <div class="col-lg-6 order-2 order-lg-1 content" data-aos="fade-up" data-aos-delay="200">
-            <h3>Who we do</h3>
+            <h3>What we do</h3>
             <p class="fst-italic">
               The laboratory is made of a multidisciplinary team whose work is structured according to priority research axes:
             </p>
@@ -133,7 +161,55 @@
       </div>
 
     </section><!-- /About Section -->
+     <!-- Page Title -->
+     <div class="page-title" data-aos="fade">
+      <div class="heading">
+        <div class="container">
+          <div class="row d-flex justify-content-center text-center">
+            <div class="col-lg-8">
+              <h1>Events</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><!-- End Page Title -->
 
+    <!-- Events Section -->
+    <section id="events" class="events section">
+
+      <div class="container" data-aos="fade-up">
+
+        <div class="row">
+          <div class="col-md-6 d-flex align-items-stretch">
+            <div class="card">
+              <div class="card-img">
+                <img src="gbif1.jpg" alt="...">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title"><a href="">GBIF MEETING</a></h5>
+                <p class="fst-italic text-center">Sunday, NOvember 26th at 7:00 pm</p>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 d-flex align-items-stretch">
+            <div class="card">
+              <div class="card-img">
+                <img src="gbifm.jpg" alt="...">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title"><a href="">GBIF</a></h5>
+                <p class="fst-italic text-center">Sunday, November 15th at 7:00 pm</p>
+                <p class="card-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /Events Section -->
     <!-- Counts Section -->
     <section id="counts" class="section counts light-background">
 

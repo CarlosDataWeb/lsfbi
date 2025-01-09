@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Trainers - Mentor Bootstrap Template</title>
+  <title>Overview</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
 
@@ -52,15 +52,44 @@
         <ul>
           <li><a href="index.html" class="active">Home<br></a></li>
           <li><a href="about.html">About</a></li>
-          <li><a href="courses.html">Projects</a></li>
-          <li><a href="trainers.html">Programmes</a></li>
-          <li><a href="pricing.html">Students</a></li>
-          <li><a href="events.html">Events</a></li>
+          <li class="dropdown"><a href="project.html"><span>Projects</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="project.html">Research Projects</a></li>
+              <li><a href="gbif.html">GBIF Benin</a></li>
+              <li><a href="phd.html">KU</a></li>
+            </ul>
+          </li>
+          <li class="dropdown"><a href="Programme.html"><span>Programmes</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="Programme.html">Overview</a></li>
+              <li><a href="phd_apply_bi.html">PhD in Biodiversity Informatics</a></li>
+              <li><a href="phd_apply_forestry.html">PhD in Forestry</a></li>
+              <li><a href="mscbi.html">Msc in Biodiversity Informatics</a></li>
+              <li><a href="short_courses.html">Short Courses</a></li>
+            </ul>
+          </li>
+          <li><a href="student.html">Students</a></li>
+          <li class="dropdown"><a href="publication.html"><span>Publications</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="#">Technical Note</a></li>
+              <li class="dropdown"><a href="#"><span>Bsc,Msc,PhD Dissertations</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul>
+                  <li><a href="#">Bsc Dissertation</a></li>
+                  <li><a href="#">Msc Dissertation</a></li>
+                  <li><a href="#">PhD Dissertation</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Journal Article</a></li>
+              <li><a href="#">Books & Book Chapters</a></li>
+              <li><a href="#">Reports working & Documents</a></li>
+            </ul>
+          </li>
           <li class="dropdown"><a href="#"><span>Team Members</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
               <li><a href="management.html">MANAGEMENT ADMINISTRATION</a></li>
               <li><a href="assistant.html">LABORATORY AND FIELD ASSISTANTS</a></li>
               <li><a href="phd.html">PhD CANDIDATES</a></li>
+              <li><a href="msc.html">Msc CANDIDATES</a></li>
             </ul>
           </li>
           <li><a href="contact.html">Contact</a></li>
@@ -68,7 +97,7 @@
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
 
-      <a class="btn-getstarted" href="courses.html">Get Started</a>
+      <a class="btn-getstarted" href="Programme.html">Get Started</a>
 
     </div>
   </header>
@@ -77,7 +106,7 @@
  <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Programmes</title>
+   <title>Overview</title>
    <style>
      /* Global Styles */
      body {
@@ -289,6 +318,166 @@
           font-size: 1.5rem;
         }
       }
+
+/* Section des installations */
+.facilities-section {
+  background-color: #45a049; /* Vert foncé */
+  color: white;
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+.facilities-section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.facilities-section p {
+  font-size: 1rem;
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+
+.explore-btn {
+  display: inline-block;
+  background-color: #4caf50; /* Vert clair */
+  color: white;
+  padding: 10px 20px;
+  font-size: 1rem;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.explore-btn:hover {
+  background-color: #45a049;
+}
+
+/* Style de l'accordéon */
+.accordion {
+  margin-top: 30px;
+}
+
+.accordion-item {
+  background-color: white;
+  color: #333;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+.accordion-item button {
+  width: 100%;
+  background: none;
+  border: none;
+  outline: none;
+  padding: 15px 20px;
+  font-size: 1rem;
+  text-align: left;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.accordion-item button:hover {
+  background-color: #f4f4f4;
+}
+
+.accordion-item button:after {
+  content: "▼";
+  float: right;
+  font-size: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.accordion-item button.active:after {
+  transform: rotate(-180deg);
+}
+
+.accordion-content {
+  display: none;
+  padding: 15px 20px;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+.accordion-content.show {
+  display: block;
+}
+
+/* Responsivité */
+@media (max-width: 768px) {
+  /* Sur les petits écrans (tablettes et moins) */
+  .facilities-section {
+    padding: 20px;
+  }
+
+  .facilities-section h2 {
+    font-size: 1.6rem;
+  }
+
+  .facilities-section p {
+    font-size: 0.95rem;
+  }
+
+  .explore-btn {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+
+  .accordion-item button {
+    font-size: 0.9rem;
+    padding: 12px 18px;
+  }
+
+  .accordion-item button:after {
+    font-size: 0.9rem;
+  }
+
+  .accordion-content {
+    font-size: 0.85rem;
+    padding: 12px 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Sur les très petits écrans (mobiles) */
+  .facilities-section {
+    padding: 15px;
+  }
+
+  .facilities-section h2 {
+    font-size: 1.4rem;
+  }
+
+  .facilities-section p {
+    font-size: 0.9rem;
+  }
+
+  .explore-btn {
+    font-size: 0.8rem;
+    padding: 6px 12px;
+  }
+
+  .accordion-item button {
+    font-size: 0.85rem;
+    padding: 10px 15px;
+  }
+
+  .accordion-item button:after {
+    font-size: 0.85rem;
+  }
+
+  .accordion-content {
+    font-size: 0.8rem;
+    padding: 10px 15px;
+  }
+}
+
     </style>
   </head>
   <body>
@@ -310,121 +499,27 @@
         <a href="#" class="apply-btn">Apply Now</a>
       </div>
     </section>
-  </body>
-  </html>
-
-  <!-- phd in forestry -->
-
-  <!DOCTYPE html>
-  <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PhD in Forestry</title>
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-  
-      .section {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: center;
-        margin: 0 auto;
-        max-width: 1200px;
-        padding: 20px;
-      }
-  
-      .image-container {
-        flex: 1;
-        min-width: 300px;
-        max-width: 600px;
-      }
-  
-      .image-container img {
-        width: 100%;
-        height: auto;
-        display: block;
-        border-radius: 5px;
-      }
-  
-      .content-container {
-        flex: 1;
-        min-width: 300px;
-        padding: 20px;
-      }
-  
-      .content-container h2 {
-        font-size: 2rem;
-        color: #333;
-        margin-bottom: 20px;
-      }
-  
-      .content-container p {
-        font-size: 1rem;
-        color: #555;
-        line-height: 1.6;
-        margin-bottom: 20px;
-      }
-  
-      .content-container ul {
-        list-style-type: none;
-        padding: 0;
-        margin-bottom: 20px;
-      }
-  
-      .content-container ul li a {
-    text-decoration: none; /* Retire le soulignement */
-    color: #555;
-    font-weight: 300;
-    transition: color 0.3s ease; /* Ajoute une transition pour un effet fluide */
-    }
-
-    .content-container ul li a:hover {
-    color: #45a049; /* Change la couleur au survol */
-     text-decoration: underline; /* Ajoute un soulignement au survol */
-    }
-  
-      .apply-btn {
-        display: inline-block;
-        background-color: #013220;;
-        color: white;
-        padding: 10px 20px;
-        text-decoration: none;
-        font-size: 1rem;
-        border-radius: 5px;
-        transition: background-color 0.3s ease;
-      }
-  
-      .apply-btn:hover {
-        background-color: #013220; ;
-      }
-  
-      /* Responsive Design */
-      @media (max-width: 768px) {
-        .section {
-          flex-direction: column;
-          padding: 10px;
-        }
-  
-        .content-container {
-          padding: 10px;
-        }
-  
-        .content-container h2 {
-          font-size: 1.5rem;
-        }
-      }
-    </style>
-  </head>
-  <body>
     <section class="section">
       <div class="image-container">
-        <img src="Phd in Forestery - Copie.png" alt="PhD in Plant Breeding">
+        <img src="phdbernice - Copie.jpg" alt="PhD in BI">
+      </div>
+      <div class="content-container">
+        <h2>PhD in Biodiversity Informatics</h2>
+        <p>
+          The PhD is a four-year programme consisting of two stages: one year of academic study at the University of Abomey-Calavi and three years of thesis research at the students' research station/university in their home countries. Students return in the last six months of the final year to complete and submit their theses.
+        </p>
+        <ul>
+          <li><a href="#">Program Overview</a></li>
+          <li><a href="#">Course Description</a></li>
+          <li><a href="#">Eligibility & Selection Criteria</a></li>
+          <li><a href="#">Fee Schedule</a></li>
+        </ul>
+        <a href="#" class="apply-btn">Apply Now</a>
+      </div>
+    </section>
+    <section class="section">
+      <div class="image-container">
+        <img src="Phd in Forestery - Copie.png" alt="PhD in BI">
       </div>
       <div class="content-container">
         <h2>PhD in Forestry</h2>
@@ -440,257 +535,14 @@
         <a href="#" class="apply-btn">Apply Now</a>
       </div>
     </section>
-  </body>
-  </html>
-  <!-- Msc Biodiversity Informatics -->
-
-  <!DOCTYPE html>
-  <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PhD in Forestry</title>
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-  
-      .section {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: center;
-        margin: 0 auto;
-        max-width: 1200px;
-        padding: 20px;
-      }
-  
-      .image-container {
-        flex: 1;
-        min-width: 300px;
-        max-width: 600px;
-      }
-  
-      .image-container img {
-        width: 100%;
-        height: auto;
-        display: block;
-        border-radius: 5px;
-      }
-  
-      .content-container {
-        flex: 1;
-        min-width: 300px;
-        padding: 20px;
-      }
-  
-      .content-container h2 {
-        font-size: 2rem;
-        color: #333;
-        margin-bottom: 20px;
-      }
-  
-      .content-container p {
-        font-size: 1rem;
-        color: #555;
-        line-height: 1.6;
-        margin-bottom: 20px;
-      }
-  
-      .content-container ul {
-        list-style-type: none;
-        padding: 0;
-        margin-bottom: 20px;
-      }
-  
-      .content-container ul li a {
-    text-decoration: none; /* Retire le soulignement */
-    color: #555;
-    font-weight: 300;
-    transition: color 0.3s ease; /* Ajoute une transition pour un effet fluide */
-    }
-
-    .content-container ul li a:hover {
-    color: #45a049; /* Change la couleur au survol */
-     text-decoration: underline; /* Ajoute un soulignement au survol */
-    }
-  
-      .apply-btn {
-        display: inline-block;
-        background-color: #013220;;
-        color: white;
-        padding: 10px 20px;
-        text-decoration: none;
-        font-size: 1rem;
-        border-radius: 5px;
-        transition: background-color 0.3s ease;
-      }
-  
-      .apply-btn:hover {
-        background-color: #45a049 ;
-      }
-  
-      /* Responsive Design */
-      @media (max-width: 768px) {
-        .section {
-          flex-direction: column;
-          padding: 10px;
-        }
-  
-        .content-container {
-          padding: 10px;
-        }
-  
-        .content-container h2 {
-          font-size: 1.5rem;
-        }
-      }
-    </style>
-  </head>
-  <body>
     <section class="section">
       <div class="image-container">
-        <img src="mscbi.jpg" alt="MBI">
-      </div>
-      <div class="content-container">
-        <h2>MSc in Biodiversity Informatics</h2>
-        <p>
-         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-        </p>
-        <ul>
-          <li><a href="#">Program Overview</a></li>
-          <li><a href="#">Course Description</a></li>
-          <li><a href="#">Eligibility & Selection Criteria</a></li>
-          <li><a href="#">Fee Schedule</a></li>
-        </ul>
-        <a href="#" class="apply-btn">Apply Now</a>
-      </div>
-    </section>
-  </body>
-  </html>
-
-  
-
-  <!-- Short course -->
-
-  <!DOCTYPE html>
-  <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PhD in Forestry</title>
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-  
-      .section {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: center;
-        margin: 0 auto;
-        max-width: 1200px;
-        padding: 20px;
-      }
-  
-      .image-container {
-        flex: 1;
-        min-width: 300px;
-        max-width: 600px;
-      }
-  
-      .image-container img {
-        width: 100%;
-        height: auto;
-        display: block;
-        border-radius: 5px;
-      }
-  
-      .content-container {
-        flex: 1;
-        min-width: 300px;
-        padding: 20px;
-      }
-  
-      .content-container h2 {
-        font-size: 2rem;
-        color: #333;
-        margin-bottom: 20px;
-      }
-  
-      .content-container p {
-        font-size: 1rem;
-        color: #555;
-        line-height: 1.6;
-        margin-bottom: 20px;
-      }
-  
-      .content-container ul {
-        list-style-type: none;
-        padding: 0;
-        margin-bottom: 20px;
-      }
-  
-      .content-container ul li a {
-    text-decoration: none; /* Retire le soulignement */
-    color: #555;
-    font-weight: 300;
-    transition: color 0.3s ease; /* Ajoute une transition pour un effet fluide */
-    }
-
-    .content-container ul li a:hover {
-    color: #45a049; /* Change la couleur au survol */
-     text-decoration: underline; /* Ajoute un soulignement au survol */
-    }
-  
-      .apply-btn {
-        display: inline-block;
-        background-color: #45a049;
-        color: white;
-        padding: 10px 20px;
-        text-decoration: none;
-        font-size: 1rem;
-        border-radius: 5px;
-        transition: background-color 0.3s ease;
-      }
-  
-      .apply-btn:hover {
-        background-color: #45a049 ;
-      }
-  
-      /* Responsive Design */
-      @media (max-width: 768px) {
-        .section {
-          flex-direction: column;
-          padding: 10px;
-        }
-  
-        .content-container {
-          padding: 10px;
-        }
-  
-        .content-container h2 {
-          font-size: 1.5rem;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <section class="section">
-      <div class="image-container">
-        <img src="creditong1.jpg" alt="PhD in Plant Breeding">
+        <img src="Photo3 - Copie.png" alt="PhD in BI">
       </div>
       <div class="content-container">
         <h2>Professional Short Courses</h2>
         <p>
-         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus pariatur quis, rerum, id nihil quod tenetur officiis quia adipisci incidunt sint ducimus. Magni ut molestiae quidem accusantium eos fuga illo.
         </p>
         <ul>
           <li><a href="#">Program Overview</a></li>
@@ -701,127 +553,18 @@
         <a href="#" class="apply-btn">Apply Now</a>
       </div>
     </section>
-  </body>
-  </html>
-
-  <!-- our facilities -->
-
-  <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Our Facilities</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      background-color: #f4f4f4;
-    }
-
-    .facilities-section {
-      background-color: #45a049; /* Vert foncé */
-      color: white;
-      padding: 40px 20px;
-      max-width: 1200px;
-      margin: 0 auto;
-      border-radius: 10px;
-    }
-
-    .facilities-section h2 {
-      font-size: 2rem;
-      margin-bottom: 20px;
-    }
-
-    .facilities-section p {
-      font-size: 1rem;
-      line-height: 1.8;
-      margin-bottom: 30px;
-    }
-
-    .facilities-section .explore-btn {
-      display: inline-block;
-      background-color: #4caf50; /* Vert clair */
-      color: white;
-      padding: 10px 20px;
-      font-size: 1rem;
-      text-decoration: none;
-      border-radius: 5px;
-      transition: background-color 0.3s ease;
-    }
-
-    .facilities-section .explore-btn:hover {
-      background-color: #45a049;
-    }
-
-    .accordion {
-      margin-top: 30px;
-    }
-
-    .accordion-item {
-      background-color: white;
-      color: #333;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      margin-bottom: 10px;
-      overflow: hidden;
-    }
-
-    .accordion-item button {
-      width: 100%;
-      background: none;
-      border: none;
-      outline: none;
-      padding: 15px 20px;
-      font-size: 1rem;
-      text-align: left;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-
-    .accordion-item button:hover {
-      background-color: #f4f4f4;
-    }
-
-    .accordion-item button:after {
-      content: "▼";
-      float: right;
-      font-size: 1rem;
-      transition: transform 0.3s ease;
-    }
-
-    .accordion-item button.active:after {
-      transform: rotate(-180deg);
-    }
-
-    .accordion-content {
-      display: none;
-      padding: 15px 20px;
-      font-size: 0.9rem;
-      line-height: 1.6;
-      background-color: #f9f9f9;
-      color: #333;
-    }
-
-    .accordion-content.show {
-      display: block;
-    }
-  </style>
-</head>
-<body>
+  <!-- Début de la section des installations -->
   <section class="facilities-section">
     <h2>Our Facilities</h2>
     <p>
-        The <strong>Laboratory of Forest Sciences and Biodiversity Informatics (LSFBI)</strong> provides state-of-the-art facilities to support advanced learning, research, and innovation. The Centre features fully air-conditioned lecture halls equipped with projectors, high-speed Wi-Fi, and an advanced computer lab designed for statistical analysis and modeling.  
-        Additionally, the LSFBI houses a specialized genetics lab for bioinformatics research and offers modern GPS devices and forestry instruments to aid field studies and practical training.  
-        The Centre leverages the expertise of professors and students for collaborative research, fostering a dynamic environment for scientific exploration and practical applications.  
-        Whether it's cutting-edge technology or a dedicated research team, the LSF ensures an optimal environment for education and development in forestry and related disciplines.
-      </p>
-    
+      The <strong>Laboratory of Forest Sciences and Biodiversity Informatics (LSFBI)</strong> provides state-of-the-art facilities to support advanced learning, research, and innovation. The Centre features fully air-conditioned lecture halls equipped with projectors, high-speed Wi-Fi, and an advanced computer lab designed for statistical analysis and modeling.
+      Additionally, the LSFBI houses a specialized genetics lab for bioinformatics research and offers modern GPS devices and forestry instruments to aid field studies and practical training.
+      The Centre leverages the expertise of professors and students for collaborative research, fostering a dynamic environment for scientific exploration and practical applications.
+      Whether it's cutting-edge technology or a dedicated research team, the LSF ensures an optimal environment for education and development in forestry and related disciplines.
+    </p>
     <a href="#" class="explore-btn">Explore our Facilities</a>
 
+    <!-- Début de l'accordéon -->
     <div class="accordion">
       <div class="accordion-item">
         <button class="accordion-button">Short Courses</button>
@@ -836,31 +579,18 @@
         </div>
       </div>
     </div>
+    
   </section>
 
-  <script>
-    const buttons = document.querySelectorAll(".accordion-button");
+  <script src="script.js"></script> <!-- Inclusion du script JavaScript -->
 
-    buttons.forEach((button) => {
-      button.addEventListener("click", () => {
-        const content = button.nextElementSibling;
-        const isActive = content.classList.contains("show");
 
-        // Fermer tous les contenus
-        document.querySelectorAll(".accordion-content").forEach((c) => c.classList.remove("show"));
-        document.querySelectorAll(".accordion-button").forEach((b) => b.classList.remove("active"));
+  </body>
+  </html>
 
-        // Afficher/fermer le contenu sélectionné
-        if (!isActive) {
-          content.classList.add("show");
-          button.classList.add("active");
-        }
-      });
-    });
-  </script>
-</body>
-</html>
+  
 
+  
     
   <footer id="footer" class="footer position-relative light-background">
 
@@ -921,7 +651,7 @@
     </div>
 
     <div class="container copyright text-center mt-4">
-      <p>© <span>Copyright</span> <strong class="px-1 sitename">LSFBI</strong> <span>All Rights Reserved</span></p>
+      <p>© <span>Copyright 2024</span> <strong class="px-1 sitename">LSFBI</strong> <span>All Rights Reserved</span></p>
     </div>
 
   </footer>
