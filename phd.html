@@ -51,15 +51,43 @@
         <ul>
           <li><a href="index.html" class="active">Home<br></a></li>
           <li><a href="about.html">About</a></li>
-          <li><a href="courses.html">Projects</a></li>
-          <li><a href="trainers.html">Programmes</a></li>
-          <li><a href="pricing.html">Students</a></li>
-          <li><a href="events.html">Events</a></li>
+          <li class="dropdown"><a href="project.html"><span>Projects</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="project.html">Research Projects</a></li>
+              <li><a href="gbif.html">GBIF Benin</a></li>
+              <li><a href="ku.html">KU</a></li>
+            </ul>
+          </li>
+          <li class="dropdown"><a href="Programme.html"><span>Programmes</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="Programme.html">Overview</a></li>
+              <li><a href="phd_apply_bi.html">PhD in Biodiversity Informatics</a></li>
+              <li><a href="phd_apply_forestry.html">PhD in Forestry</a></li>
+              <li><a href="short_courses.html">Short Courses</a></li>
+            </ul>
+          </li>
+          <li><a href="student.html">Students</a></li>
+          <li class="dropdown"><a href="publication.html"><span>Publications</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="technicalnote.html">Technical Note</a></li>
+              <li class="dropdown"><a href="#"><span>Bsc,Msc,PhD Dissertations</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul>
+                  <li><a href="bscdissertation.html">Bsc Dissertation</a></li>
+                  <li><a href="mscdissertation.html">Msc Dissertation</a></li>
+                  <li><a href="phddissertation.html">PhD Dissertation</a></li>
+                </ul>
+              </li>
+              <li><a href="journal.html">Journal Article</a></li>
+              <li><a href="book.html">Books & Book Chapters</a></li>
+              <li><a href="rapports.html">Reports working & Documents</a></li>
+            </ul>
+          </li>
           <li class="dropdown"><a href="#"><span>Team Members</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
               <li><a href="management.html">MANAGEMENT ADMINISTRATION</a></li>
               <li><a href="assistant.html">LABORATORY AND FIELD ASSISTANTS</a></li>
               <li><a href="phd.html">PhD CANDIDATES</a></li>
+              <li><a href="msc.html">Msc CANDIDATES</a></li>
             </ul>
           </li>
           <li><a href="contact.html">Contact</a></li>
@@ -67,7 +95,7 @@
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
 
-      <a class="btn-getstarted" href="courses.html">Get Started</a>
+      <a class="btn-getstarted" href="Programme.html">Get Started</a>
 
     </div>
   </header>
@@ -109,7 +137,7 @@
     
             .team-members {
                 display: grid;
-                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+                grid-template-columns: repeat(3, 1fr); /* 3 photos par ligne */
                 gap: 30px;
                 justify-items: center;
             }
@@ -120,15 +148,23 @@
                 box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
                 padding: 20px;
                 width: 100%;
+                max-width: 350px; /* Largeur maximale */
                 text-align: center;
-                transition: transform 0.3s ease;
+                transition: transform 0.3s ease, background-color 0.3s ease;
             }
     
             .member img {
-                width: 150px;
-                height: 150px;
+                width: 300px;
+                height: 300px;
                 border-radius: 50%;
                 margin-bottom: 15px;
+                cursor: pointer; /* Curseur pour indiquer l'interaction */
+                transition: border 0.3s ease;
+            }
+    
+            /* Effet au clic */
+            .member img:active {
+                border: 5px solid green; /* Bordure verte au clic */
             }
     
             .member h2 {
@@ -179,6 +215,10 @@
                     margin-bottom: 20px;
                 }
     
+                .team-members {
+                    grid-template-columns: 1fr; /* 1 photo par ligne sur petits écrans */
+                }
+    
                 .member {
                     width: 90%;
                     padding: 15px;
@@ -192,109 +232,76 @@
     </head>
     <body>
     
-        <section class="team-section">
-          <br>
-          <br>
-          <br>
-            <h1>PhD CANDIDATES</h1>
-            <div class="team-members">
-                <!-- Team Member 1 -->
-                <div class="member">
-                    <img src="inconnu.jpg" alt="Director">
-                    <h2>AÏKPON Gorgias</h2>
-                    
-                    <div class="view-biography">
-                        <a href="#">View Biography</a>
-                    </div>
-                    <p>PhD in Biodiversity Informatics</p>
+    <section class="team-section">
+        <h1>PhD CANDIDATES</h1>
+        <div class="team-members">
+            <!-- Membres de l'équipe -->
+            <div class="member">
+                <img src="inconnu.jpg" alt="Director">
+                <h2>AÏKPON Gorgias</h2>
+                <div class="view-biography">
+                    <a href="#">View Biography</a>
                 </div>
-    
-                <!-- Team Member 2 -->
-                <div class="member">
-                    <img src="inconnu.jpg" alt="Team Member">
-                    <h2>KOTIN Justine</h2>
-                    
-                    <div class="view-biography">
-                        <a href="#">View Biography</a>
-                    </div>
-                    <p>PhD in Biodiversity Informatics</p>
-                </div>
-    
-                <!-- Team Member 3 -->
-                <div class="member">
-                    <img src="inconnu.jpg" alt="Team Member">
-                    <h2>APELETE Eben-Ezer </h2>
-                   
-                    <div class="view-biography">
-                        <a href="#">View Biography</a>
-                    </div>
-                    <p>PhD in Biodiversity Informatics</p>
-                </div>
-    
-                <!-- Team Member 4 -->
-                <div class="member">
-                    <img src="inconnu.jpg" alt="Team Member">
-                    <h2>AHOUANGBENON Joseph </h2>
-                    <div class="view-biography">
-                        <a href="#">View Biography</a>
-                    </div>
-                    <p>PhD in Biodiversity Informatics</p>
-                    
-                </div>
+                <p>PhD in Biodiversity Informatics</p>
             </div>
-            <br>
-            <div class="team-members">
-                <!-- Team Member 1 -->
-                <div class="member">
-                    <img src="inconnu.jpg" alt="Director">
-                    <h2>DOSSOU Josué Carol </h2>
-                    <div class="view-biography">
-                        <a href="#">View Biography</a>
-                    </div>
-                    <p>PhD in Biodiversity Informatics</p>
-                    
+            <div class="member">
+                <img src="inconnu.jpg" alt="Team Member">
+                <h2>KOTIN Justine</h2>
+                <div class="view-biography">
+                    <a href="#">View Biography</a>
                 </div>
+                <p>PhD in Biodiversity Informatics</p>
             </div>
-            
-            <div class="team-members">
-                <!-- Team Member 1 -->
-                <div class="member">
-                    <img src="inconnu.jpg" alt="Director">
-                    <h2>ATCHADÉ Nicolas </h2>
-                    
-                    <div class="view-biography">
-                        <a href="#">View Biography</a>
-                    </div>
-                    <p>PhD in Forestry</p>
-                    
+            <div class="member">
+                <img src="inconnu.jpg" alt="Team Member">
+                <h2>APELETE Eben-Ezer</h2>
+                <div class="view-biography">
+                    <a href="#">View Biography</a>
                 </div>
+                <p>PhD in Biodiversity Informatics</p>
             </div>
-            <div class="team-members">
-                <!-- Team Member 1 -->
-                <div class="member">
-                    <img src="inconnu.jpg" alt="Director">
-                    <h2>TOGNI Yolande </h2> 
-                    <div class="view-biography">
-                        <a href="#">View Biography</a>
-                    </div>
-                    <p>PhD in Forestry</p>
-                    
+            <div class="member">
+                <img src="inconnu.jpg" alt="Team Member">
+                <h2>AHOUANGBENON Joseph</h2>
+                <div class="view-biography">
+                    <a href="#">View Biography</a>
                 </div>
+                <p>PhD in Biodiversity Informatics</p>
             </div>
-
-            <div class="team-members">
-                <!-- Team Member 1 -->
-                <div class="member">
-                    <img src="inconnu.jpg" alt="Director">
-                    <h2>DAVOUDOU Pascaline </h2>
-                    <div class="view-biography">
-                        <a href="#">View Biography</a>
-                    </div>
-                    <p>PhD in Forestry</p>
-                    
+            <div class="member">
+                <img src="inconnu.jpg" alt="Director">
+                <h2>DOSSOU Josué Carol</h2>
+                <div class="view-biography">
+                    <a href="#">View Biography</a>
                 </div>
+                <p>PhD in Biodiversity Informatics</p>
             </div>
-        </section>
+            <div class="member">
+                <img src="inconnu.jpg" alt="Director">
+                <h2>ATCHADÉ Nicolas</h2>
+                <div class="view-biography">
+                    <a href="#">View Biography</a>
+                </div>
+                <p>PhD in Forestry</p>
+            </div>
+            <div class="member">
+                <img src="inconnu.jpg" alt="Director">
+                <h2>TOGNI Yolande</h2>
+                <div class="view-biography">
+                    <a href="#">View Biography</a>
+                </div>
+                <p>PhD in Forestry</p>
+            </div>
+            <div class="member">
+                <img src="inconnu.jpg" alt="Director">
+                <h2>DAVOUDOU Pascaline</h2>
+                <div class="view-biography">
+                    <a href="#">View Biography</a>
+                </div>
+                <p>PhD in Forestry</p>
+            </div>
+        </div>
+    </section>
     
     </body>
     </html>

@@ -51,23 +51,50 @@
         <ul>
           <li><a href="index.html" class="active">Home<br></a></li>
           <li><a href="about.html">About</a></li>
-          <li><a href="courses.html">Projects</a></li>
-          <li><a href="trainers.html">Programmes</a></li>
-          <li><a href="pricing.html">Students</a></li>
-          <li><a href="events.html">Events</a></li>
+          <li class="dropdown"><a href="project.html"><span>Projects</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="project.html">Research Projects</a></li>
+              <li><a href="gbif.html">GBIF Benin</a></li>
+              <li><a href="ku.html">KU</a></li>
+            </ul>
+          </li>
+          <li class="dropdown"><a href="Programme.html"><span>Programmes</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="Programme.html">Overview</a></li>
+              <li><a href="phd_apply_bi.html">PhD in Biodiversity Informatics</a></li>
+              <li><a href="phd_apply_forestry.html">PhD in Forestry</a></li>
+              <li><a href="short_courses.html">Short Courses</a></li>
+            </ul>
+          </li>
+          <li><a href="student.html">Students</a></li>
+          <li class="dropdown"><a href="publication.html"><span>Publications</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="technicalnote.html">Technical Note</a></li>
+              <li class="dropdown"><a href="#"><span>Bsc,Msc,PhD Dissertations</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul>
+                  <li><a href="bscdissertation.html">Bsc Dissertation</a></li>
+                  <li><a href="mscdissertation.html">Msc Dissertation</a></li>
+                  <li><a href="phddissertation.html">PhD Dissertation</a></li>
+                </ul>
+              </li>
+              <li><a href="journal.html">Journal Article</a></li>
+              <li><a href="book.html">Books & Book Chapters</a></li>
+              <li><a href="rapports.html">Reports working & Documents</a></li>
+            </ul>
+          </li>
           <li class="dropdown"><a href="#"><span>Team Members</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
               <li><a href="management.html">MANAGEMENT ADMINISTRATION</a></li>
               <li><a href="assistant.html">LABORATORY AND FIELD ASSISTANTS</a></li>
               <li><a href="phd.html">PhD CANDIDATES</a></li>
+              <li><a href="msc.html">Msc CANDIDATES</a></li>
             </ul>
           </li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
-
-      <a class="btn-getstarted" href="courses.html">Get Started</a>
+      <a class="btn-getstarted" href="Programme.html">Get Started</a>
 
     </div>
   </header>
@@ -78,183 +105,191 @@
     </section><!-- /Hero Section -->
 
     <!DOCTYPE html>
-    <html lang="fr">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Team Members</title>
-        <style>
-            /* Réinitialisation de base */
-            body, html {
-                margin: 0;
-                padding: 0;
-                font-family: Arial, sans-serif;
-                background-color: #fff; /* Fond blanc */
-            }
-    
-            /* Section des membres de l'équipe */
-            .team-section {
-                padding: 40px 20px;
-                background-color: #fff;
-                color: #333;
-                text-align: center;
-            }
-    
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Members</title>
+    <style>
+        /* Réinitialisation de base */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #fff; /* Fond blanc */
+        }
+
+        /* Section des membres de l'équipe */
+        .team-section {
+            padding: 40px 20px;
+            background-color: #fff;
+            color: #333;
+            text-align: center;
+        }
+
+        .team-section h1 {
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .team-members {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3 photos par ligne */
+            gap: 30px;
+            justify-items: center;
+        }
+
+        .member {
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 100%;
+            max-width: 350px; /* Largeur maximale */
+            text-align: center;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        /* Taille des photos augmentée */
+        .member img {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+            cursor: pointer; /* Curseur pour indiquer l'interaction */
+            transition: border 0.3s ease;
+        }
+
+        /* Effet au clic */
+        .member img:active {
+            border: 5px solid green; /* Bordure verte au clic */
+        }
+
+        .member h2 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .view-biography {
+            margin-top: 15px;
+        }
+
+        .view-biography a {
+            display: inline-block;
+            padding: 12px 20px;
+            background-color: #28a745; /* Vert vif */
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 30px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+        }
+
+        .view-biography a:hover {
+            background-color: #013220;
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+            transform: translateY(-3px);
+        }
+
+        .member p {
+            font-size: 1rem;
+            color: #555;
+            margin-top: 10px;
+        }
+
+        /* Effet hover pour l'élément membre */
+        .member:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
             .team-section h1 {
-                font-size: 2.5rem;
-                margin-bottom: 40px;
-                font-weight: 600;
-                color: #333;
+                font-size: 2rem;
+                margin-bottom: 20px;
             }
-    
+
             .team-members {
-                display: grid;
-                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-                gap: 30px;
-                justify-items: center;
+                grid-template-columns: 1fr; /* 1 photo par ligne sur petits écrans */
             }
-    
+
             .member {
-                background-color: #f9f9f9;
-                border-radius: 8px;
-                box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
-                padding: 20px;
-                width: 100%;
-                text-align: center;
-                transition: transform 0.3s ease;
+                width: 90%;
+                padding: 15px;
             }
-    
-            .member img {
-                width: 150px;
-                height: 150px;
-                border-radius: 50%;
-                margin-bottom: 15px;
-            }
-    
-            .member h2 {
-                font-size: 1.2rem;
-                font-weight: 600;
-                margin-bottom: 10px;
-                color: #333;
-            }
-    
-            .view-biography {
-                margin-top: 15px;
-            }
-    
+
             .view-biography a {
-                display: inline-block;
-                padding: 12px 20px;
-                background-color: #28a745; /* Vert vif */
-                color: white;
-                text-decoration: none;
-                font-weight: 600;
-                border-radius: 30px;
-                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-                transition: all 0.3s ease;
-                text-transform: uppercase;
+                padding: 10px 15px;
             }
-    
-            .view-biography a:hover {
-                background-color: #013220;
-                box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
-                transform: translateY(-3px);
-            }
-    
-            .member p {
-                font-size: 1rem;
-                color: #555;
-                margin-top: 10px;
-            }
-    
-            /* Effet hover pour l'élément membre */
-            .member:hover {
-                transform: translateY(-5px);
-            }
-    
-            /* Responsive design */
-            @media (max-width: 768px) {
-                .team-section h1 {
-                    font-size: 2rem;
-                    margin-bottom: 20px;
-                }
-    
-                .member {
-                    width: 90%;
-                    padding: 15px;
-                }
-    
-                .view-biography a {
-                    padding: 10px 15px;
-                }
-            }
-        </style>
-    </head>
-    <body>
-    
-        <section class="team-section">
-          <br>
-          <br>
-          <br>
-            <h1>LABORATORY AND FIELD ASSISTANTS</h1>
-            <div class="team-members">
-                <!-- Team Member 1 -->
-                <div class="member">
-                    <img src="inconnu.jpg" alt="Director">
-                    <h2>Bernice Hounton</h2>
-                    <div class="view-biography">
-                        <a href="#">View Biography</a>
-                    </div>
-                    <p>Laboratory Assistant</p>
+        }
+    </style>
+</head>
+<body>
+
+    <section class="team-section">
+        <h1>LABORATORY AND FIELD ASSISTANTS</h1>
+        <div class="team-members">
+            <!-- Team Member 1 -->
+            <div class="member">
+                <img src="inconnu.jpg" alt="Director">
+                <h2>Bernice Hounton</h2>
+                <div class="view-biography">
+                    <a href="#">View Biography</a>
                 </div>
-    
-                <!-- Team Member 2 -->
-                <div class="member">
-                    <img src="inconnu.jpg" alt="Team Member">
-                    <h2>Felicien KAKPOVI</h2>
-                    <div class="view-biography">
-                        <a href="#">View Biography</a>
-                    </div>
-                    <p>Laboratory Assistant</p>
-                </div>
-    
-                <!-- Team Member 3 -->
-                <div class="member">
-                    <img src="inconnu.jpg" alt="Team Member">
-                    <h2>Auriol GANSOU</h2>
-                    <div class="view-biography">
-                        <a href="#">View Biography</a>
-                    </div>
-                    <p>Laboratory Assistant</p>
-                </div>
-    
-                <!-- Team Member 4 -->
-                <div class="member">
-                    <img src="inconnu.jpg" alt="Team Member">
-                    <h2>Lucrece</h2>
-                    <div class="view-biography">
-                        <a href="#">View Biography</a>
-                    </div>
-                    <p>Assistant</p>
-                </div>
+                <p>Laboratory Assistant</p>
             </div>
-            <br>
-            <div class="team-members">
-                <!-- Team Member 1 -->
-                <div class="member">
-                    <img src="inconnu.jpg" alt="Director">
-                    <h2>Carlos SEGBLEVI</h2>
-                    <div class="view-biography">
-                        <a href="#">View Biography</a>
-                    </div>
-                    <p>Laboratory Assistant</p>
+
+            <!-- Team Member 2 -->
+            <div class="member">
+                <img src="inconnu.jpg" alt="Team Member">
+                <h2>Felicien KAKPOVI</h2>
+                <div class="view-biography">
+                    <a href="#">View Biography</a>
                 </div>
+                <p>Laboratory Assistant</p>
             </div>
-        </section>
-    
-    </body>
-    </html>
-    
+
+            <!-- Team Member 3 -->
+            <div class="member">
+                <img src="inconnu.jpg" alt="Team Member">
+                <h2>Auriol GANSOU</h2>
+                <div class="view-biography">
+                    <a href="#">View Biography</a>
+                </div>
+                <p>Laboratory Assistant</p>
+            </div>
+
+            <!-- Team Member 4 -->
+            <div class="member">
+                <img src="inconnu.jpg" alt="Team Member">
+                <h2>Lucrece</h2>
+                <div class="view-biography">
+                    <a href="#">View Biography</a>
+                </div>
+                <p>Assistant</p>
+            </div>
+
+            <!-- Team Member 5 -->
+            <div class="member">
+                <img src="inconnu.jpg" alt="Director">
+                <h2>Carlos SEGBLEVI</h2>
+                <div class="view-biography">
+                    <a href="#">View Biography</a>
+                </div>
+                <p>Laboratory Assistant</p>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
+
 
   <footer id="footer" class="footer position-relative light-background">
 

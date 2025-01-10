@@ -55,7 +55,7 @@
             <ul>
               <li><a href="project.html">Research Projects</a></li>
               <li><a href="gbif.html">GBIF Benin</a></li>
-              <li><a href="phd.html">KU</a></li>
+              <li><a href="ku.html">KU</a></li>
             </ul>
           </li>
           <li class="dropdown"><a href="Programme.html"><span>Programmes</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
@@ -69,17 +69,17 @@
           <li><a href="student.html">Students</a></li>
           <li class="dropdown"><a href="publication.html"><span>Publications</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
-              <li><a href="#">Technical Note</a></li>
+              <li><a href="technicalnote.html">Technical Note</a></li>
               <li class="dropdown"><a href="#"><span>Bsc,Msc,PhD Dissertations</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                 <ul>
-                  <li><a href="#">Bsc Dissertation</a></li>
-                  <li><a href="#">Msc Dissertation</a></li>
-                  <li><a href="#">PhD Dissertation</a></li>
+                  <li><a href="bscdissertation.html">Bsc Dissertation</a></li>
+                  <li><a href="mscdissertation.html">Msc Dissertation</a></li>
+                  <li><a href="phddissertation.html">PhD Dissertation</a></li>
                 </ul>
               </li>
-              <li><a href="#">Journal Article</a></li>
-              <li><a href="#">Books & Book Chapters</a></li>
-              <li><a href="#">Reports working & Documents</a></li>
+              <li><a href="journal.html">Journal Article</a></li>
+              <li><a href="book.html">Books & Book Chapters</a></li>
+              <li><a href="rapports.html">Reports working & Documents</a></li>
             </ul>
           </li>
           <li class="dropdown"><a href="#"><span>Team Members</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
@@ -123,7 +123,6 @@
             .team-section {
                 padding: 40px 20px;
                 background-color: #fff;
-                color: #333;
                 text-align: center;
             }
     
@@ -136,7 +135,7 @@
     
             .team-members {
                 display: grid;
-                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+                grid-template-columns: repeat(3, 1fr); /* 3 colonnes */
                 gap: 30px;
                 justify-items: center;
             }
@@ -147,15 +146,18 @@
                 box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
                 padding: 20px;
                 width: 100%;
+                max-width: 350px; /* Largeur maximale */
                 text-align: center;
-                transition: transform 0.3s ease;
+                transition: transform 0.3s ease, background-color 0.3s ease;
+                cursor: pointer;
             }
     
             .member img {
-                width: 150px;
-                height: 150px;
+                width: 300px;
+                height: 300px;
                 border-radius: 50%;
                 margin-bottom: 15px;
+                transition: background-color 0.3s ease;
             }
     
             .member h2 {
@@ -165,19 +167,14 @@
                 color: #333;
             }
     
-            .view-biography {
-                margin-top: 15px;
-            }
-    
             .view-biography a {
                 display: inline-block;
-                padding: 12px 20px;
+                padding: 10px 20px;
                 background-color: #28a745; /* Vert vif */
                 color: white;
                 text-decoration: none;
                 font-weight: 600;
                 border-radius: 30px;
-                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
                 transition: all 0.3s ease;
                 text-transform: uppercase;
             }
@@ -194,35 +191,28 @@
                 margin-top: 10px;
             }
     
-            /* Effet hover pour l'élément membre */
-            .member:hover {
+            /* Effet hover et clic */
+            .member:active {
+                background-color: #28a745; /* Vert vif */
                 transform: translateY(-5px);
             }
     
             /* Responsive design */
             @media (max-width: 768px) {
-                .team-section h1 {
-                    font-size: 2rem;
-                    margin-bottom: 20px;
+                .team-members {
+                    grid-template-columns: repeat(2, 1fr); /* 2 colonnes sur tablettes */
                 }
+            }
     
-                .member {
-                    width: 90%;
-                    padding: 15px;
-                }
-    
-                .view-biography a {
-                    padding: 10px 15px;
+            @media (max-width: 480px) {
+                .team-members {
+                    grid-template-columns: 1fr; /* 1 colonne sur mobile */
                 }
             }
         </style>
     </head>
     <body>
-    
         <section class="team-section">
-          <br>
-          <br>
-          <br>
             <h1>MANAGEMENT ADMINISTRATION</h1>
             <div class="team-members">
                 <!-- Team Member 1 -->
@@ -264,25 +254,30 @@
                     </div>
                     <p>Assistant</p>
                 </div>
-            </div>
-            <br>
-            <div class="team-members">
-                <!-- Team Member 1 -->
+    
+                <!-- Team Member 5 -->
                 <div class="member">
-                    <img src="inconnu.jpg" alt="Director">
+                    <img src="inconnu.jpg" alt="Community Manager">
                     <h2>Carlos SEGBLEVI</h2>
                     <div class="view-biography">
                         <a href="#">View Biography</a>
                     </div>
                     <p>Community Manager</p>
                 </div>
+                <!-- Team Member 5 -->
+                <div class="member">
+                  <img src="inconnu.jpg" alt="Community Manager">
+                  <h2>Bernice HOUNTON</h2>
+                  <div class="view-biography">
+                      <a href="#">View Biography</a>
+                  </div>
+                  <p>Secretary</p>
+              </div>
             </div>
         </section>
-    
     </body>
     </html>
     
-
   <footer id="footer" class="footer position-relative light-background">
 
     <div class="container footer-top">
